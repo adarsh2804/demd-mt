@@ -14,60 +14,57 @@ regressor = pickle.load(pickled_model_file)
 def home():
     return "Welcome to Diabetes centre"
 
-@app.route('/predict', methods = ["GET","POST"])
-    
-    
-def predict_flower():
+@app.route('/predict') 
+def predict_diabetes():
 
-    """ Lets try Swagger from Flasggger
-    ---
+    """ Lets try Swagger from Flasgger
+        ---
     parameters:
         - name: feature1
           in: query
-          type: int
+          type: string
           required: true
         - name: feature2
           in: query
-          type: int
+          type: string
           required: true
         - name: feature3
           in: query
-          type: int
+          type: string
           required: true
         - name: feature4
           in: query
-          type: int
+          type: string
           required: true
         - name: feature5
           in: query
-          type: int
+          type: string
           required: true
         - name: feature6
           in: query
-          type: int
+          type: string
           required: true
         - name: feature7
           in: query
-          type: int
+          type: string
           required: true
         - name: feature8
           in: query
-          type: int
+          type: string
           required: true
         - name: feature9
           in: query
-          type: int
+          type: string
           required: true
         - name: feature10
           in: query
-          type: int
+          type: string
           required: true      
     responses:
         200:
             description: the result is
     """
-
-    f1 = request.args.get("featue1")
+    f1 = request.args.get("feature1")
     f2 = request.args.get("feature2")
     f3 = request.args.get("feature3")
     f4 = request.args.get("feature4")
